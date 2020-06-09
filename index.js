@@ -1,9 +1,12 @@
 const http=require('http');
 const express=require('express');
 const app=express();
+const morgan= require('morgan');
 
 const hostname='localhost';
 const port=3000;
+
+app.use(morgan('dev'));
 app.use(express.static(__dirname+'/public'));
 
 
